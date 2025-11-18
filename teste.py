@@ -1,0 +1,2 @@
+lista = ["Arte", "Feijao", "Abacaxi"]
+
