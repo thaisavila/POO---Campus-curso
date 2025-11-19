@@ -1,2 +1,0 @@
-lista = ["Arte", "Feijao", "Abacaxi"]
-

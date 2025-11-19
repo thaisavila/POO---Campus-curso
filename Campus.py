@@ -1,7 +1,11 @@
 class Campus():
   def __init__(self):
     self.campus = ["Pici", "Itapajé", "Sobral"]
-    self.cursos_por_campus = {"Pici":["Civil", "Musica"], "Itapajé":["ADS", "SI","CD"], "Sobral":["Medicina", "Psicologia"]}
+    self.cursos_por_campus = {
+      "Pici":["Civil", "Musica"], 
+      "Itapajé":["ADS", "SI","CD"], 
+      "Sobral":["Medicina", "Psicologia"]
+      }
 
   def create(self, nome_do_campus):
     """Função para CRIAR um novo campus"""
@@ -9,6 +13,7 @@ class Campus():
       print(f"Campus '{nome_do_campus}' já existe!")
     else:
       self.campus.append(nome_do_campus)
+      self.cursos_por_campus[nome_do_campus] = []
       print(f"Campus de {nome_do_campus} cadastrado com sucesso!")
     
   def read(self):
@@ -21,6 +26,16 @@ class Campus():
         cont+=1
         print(f"{cont}. {i}")
 
+  def read_all(self):
+    for campus in self.campus:
+      print(f"\nCampus: {campus}")
+      if not self.cursos_por_campus[campus]:
+        print("  Nenhum curso cadastrado nesse campus!")
+      else:
+        cont = 0
+        for curso in self.cursos_por_campus[campus]:
+          cont+=1
+          print(f"  {cont}. {curso}")
 
   def update(self, nome_do_campus_antigo, nome_do_campus_novo):
     if nome_do_campus_antigo not in self.campus:
@@ -38,11 +53,3 @@ class Campus():
     else:
           self.campus.remove(nome_do_campus)
           print(f"Campus '{nome_do_campus}' excluído com sucesso!")
-
-Poraganbuçu = Campus()
-Poraganbuçu.create("Piauí")
-Poraganbuçu.read()
-Poraganbuçu.update("Pici","Acre")
-Poraganbuçu.read
-Poraganbuçu.delete("Itapajé")
-Poraganbuçu.read()
