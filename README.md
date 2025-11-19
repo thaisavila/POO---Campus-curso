@@ -47,7 +47,7 @@ Arquivo principal que:
 
 ---
 
-## ▶ Como Executar
+## Como Executar
 
 1. Certifique-se de ter o **Python 3** instalado.
 2. Clone ou baixe o repositório.
@@ -60,7 +60,7 @@ python main.py
 
 ---
 
-## 👩‍💻 Autora
+## Autora
 
 Projeto desenvolvido por **Thais Ávila**.
 Objetivo: praticar Python, POO e estruturas de dados.
