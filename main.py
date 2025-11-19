@@ -1,6 +1,6 @@
-from Campus import Campus
-from Cursos import Cursos  
-
+from Campus_Curso.Campus import Campus
+from Campus_Curso.Cursos import Cursos  
+# Verificar se eu consigo listar os cursos de um campus que eu criei
 ufc = Campus()
 curso = Cursos(ufc)
 
